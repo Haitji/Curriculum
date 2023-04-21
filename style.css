@@ -8,7 +8,6 @@
 
 body {
   padding: 30px;
-  border: 2px solid red;
   background: linear-gradient(to right, rgb(225, 159, 224), #9a78e0);
 }
 
@@ -16,7 +15,6 @@ main {
   width: 1000px;
   height: 1300px;
   padding: 34px;
-  border: 1px solid black;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
@@ -49,7 +47,6 @@ section p {
   flex-direction: row;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid red;
 }
 
 .column-left {
@@ -57,7 +54,6 @@ section p {
   flex-direction: column;
   height: 100%;
   width: 32%;
-  border: 1px solid black;
   background-color: rgba(93, 38, 202, 0.7215686275);
 }
 
@@ -92,14 +88,12 @@ section p {
   flex-direction: column;
   height: 100%;
   width: 68%;
-  border: 1px solid black;
 }
 
 .encabezado {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid red;
   height: 60%;
 }
 .encabezado p {
@@ -123,7 +117,7 @@ section p {
 }
 
 .sub {
-  height: 275px;
+  height: 230px;
   border: 1px solid black;
   display: flex;
   flex-direction: row;
@@ -136,7 +130,7 @@ section p {
 .sub .fecha p {
   padding-top: 5px;
   font-size: 20px;
-  height: 70px;
+  height: 50px;
 }
 
 .contenedor-lineatiempo {
@@ -157,7 +151,7 @@ section p {
   display: block;
   width: 25px;
   height: 25px;
-  background-color: red;
+  background-color: white;
   position: absolute;
   top: 10px;
   left: -7px;
@@ -169,12 +163,30 @@ section p {
   display: block;
   width: 25px;
   height: 25px;
-  background-color: red;
+  background-color: white;
   position: absolute;
   top: 80px;
   left: -7px;
   border-radius: 50%;
   border: 4px solid rgb(69, 3, 3);
+}
+
+.cierre {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid black;
+}
+.cierre p {
+  margin-left: 9px;
+  margin-bottom: 9px;
+  font-size: 35px;
+  font-weight: bold;
+  height: 40px;
+}
+.cierre .iconos {
+  display: flex;
+  flex-direction: row;
 }
 
 /*# sourceMappingURL=style.css.map */
