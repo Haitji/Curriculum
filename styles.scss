@@ -1,0 +1,167 @@
+$border: 1px solid black;
+$border2: 2px solid red;
+
+@mixin centrado(){
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin columna($width: 25%) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: $width;
+    border: $border;
+}
+* {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 30px;
+    border: $border2;
+}
+main{
+    width: 1000px;
+    height: 1300px;   
+    padding: 34px;
+    border: $border;
+    @include centrado();
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    border: $border;
+    padding:10px;
+    font-weight: bold;
+    .titulo{
+        font-size:28px;
+        margin-bottom: 6px;
+    }
+
+    p{
+        font-size: 20px;
+    }
+}
+
+.foto{
+    height: 22%;
+    width: 100%;
+    border-radius: 5px;
+}
+.container {  
+    display: flex;
+    flex-direction: row;
+    @include centrado();
+    border: $border2;
+
+}
+.column-left {
+     @include columna($width: 32%);
+
+}
+
+.skill-container{
+    width: 90%;
+    background-color: #9f9f9f;
+    margin: 0px 10px;
+}
+.skill{
+    text-align: right;
+    color:white;
+}
+.html{
+    width: 90%;
+    background-color: red;
+}
+
+.column-right {
+    @include columna($width: 68%);
+}
+
+.encabezado{
+    width: 80%;
+    @include centrado();
+    border: $border2;
+    height: 60%;
+    p{
+        font-size:80px;
+        text-align: center;;
+    }
+}
+.cuerpo{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: $border;
+
+}
+.cuerpo>p {
+    margin-left: 9px;
+    margin-bottom: 9px;
+    font-size: 35px;
+    font-weight: bold;
+    height: 40px;
+}
+
+.sub{
+    height: 275px;
+    border: $border;
+    display: flex;
+    flex-direction: row;
+
+    .fecha{
+        width: 60%;
+        padding: 13px;
+        border: $border2;
+
+        p{
+            padding-top: 5px;
+            font-size: 20px;
+            height: 70px;
+        }
+    }
+}
+.contenedor-lineatiempo{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 50px;
+    border: $border;
+
+    .lineatiempo{
+        width: 15px;
+        height: 300px;
+        background-color: blue;
+        position: relative;
+
+        &::after{
+            content: "";
+            display: block;
+            width: 25px;
+            height: 25px;
+            background-color: red;
+            position: absolute;
+            top:10px;
+            left: -7px;
+            border-radius: 50%;
+            border: 4px solid rgb(69, 3, 3);
+        }
+        &::before{
+            content: "";
+            display: block;
+            width: 25px;
+            height: 25px;
+            background-color: red;
+            position: absolute;
+            top:80px;
+            left: -7px;
+            border-radius: 50%;
+            border: 4px solid rgb(69, 3, 3);
+        }
+    }
+
+}
