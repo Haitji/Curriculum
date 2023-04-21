@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   width: 100%;
   height: 100%;
@@ -31,13 +32,16 @@ section .titulo {
   font-size: 28px;
   margin-bottom: 6px;
   color: white;
+  height: 25%;
 }
 section p {
-  font-size: 20px;
+  font-size: 22px;
+  word-spacing: 2px;
+  word-break: break-all;
 }
 
 .foto {
-  height: 22%;
+  height: 300px;
   width: 100%;
   border-radius: 5px;
 }
@@ -105,7 +109,7 @@ section p {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  border: 1px solid black;
+  width: 100%;
 }
 
 .cuerpo > p {
@@ -117,20 +121,33 @@ section p {
 }
 
 .sub {
+  width: 100%;
   height: 230px;
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
 }
 .sub .fecha {
   width: 60%;
-  padding: 13px;
-  border: 2px solid red;
+  padding: 0px 10px 10px 15px;
 }
 .sub .fecha p {
-  padding-top: 5px;
+  margin-top: 40px;
+  padding-bottom: 20px;
   font-size: 20px;
+  height: 20px;
+}
+.sub .descripción {
+  width: 400px;
+  padding: 13px;
+}
+.sub .descripción p {
+  margin-top: 15px;
+  padding-top: 5px;
+  padding-right: 25px;
+  font-size: 18px;
   height: 50px;
+  width: 400px;
+  word-break: break-all;
 }
 
 .contenedor-lineatiempo {
@@ -138,7 +155,6 @@ section p {
   flex-direction: column;
   padding: 10px;
   width: 50px;
-  border: 1px solid black;
 }
 .contenedor-lineatiempo .lineatiempo {
   width: 15px;
@@ -146,14 +162,26 @@ section p {
   background-color: blue;
   position: relative;
 }
+.contenedor-lineatiempo .lineatiempo .punto {
+  content: "";
+  display: block;
+  width: 27px;
+  height: 27px;
+  background-color: white;
+  position: absolute;
+  top: 90px;
+  left: -7px;
+  border-radius: 50%;
+  border: 4px solid rgb(69, 3, 3);
+}
 .contenedor-lineatiempo .lineatiempo::after {
   content: "";
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background-color: white;
   position: absolute;
-  top: 10px;
+  top: 20px;
   left: -7px;
   border-radius: 50%;
   border: 4px solid rgb(69, 3, 3);
@@ -161,11 +189,11 @@ section p {
 .contenedor-lineatiempo .lineatiempo::before {
   content: "";
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background-color: white;
   position: absolute;
-  top: 80px;
+  top: 160px;
   left: -7px;
   border-radius: 50%;
   border: 4px solid rgb(69, 3, 3);
@@ -175,7 +203,6 @@ section p {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  border: 1px solid black;
 }
 .cierre p {
   margin-left: 9px;
@@ -187,6 +214,14 @@ section p {
 .cierre .iconos {
   display: flex;
   flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imagen {
+  height: 140px;
+  width: 140px;
+  margin: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
