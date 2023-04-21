@@ -22,6 +22,7 @@ $border2: 2px solid red;
 body {
     padding: 30px;
     border: $border2;
+    background: linear-gradient(to right,rgb(225, 159, 224), #9a78e0);
 }
 main{
     width: 1000px;
@@ -29,17 +30,20 @@ main{
     padding: 34px;
     border: $border;
     @include centrado();
+    background-color: white;
 }
 
 section{
     display: flex;
     flex-direction: column;
-    border: $border;
     padding:10px;
     font-weight: bold;
+    border: $border;
+    
     .titulo{
         font-size:28px;
         margin-bottom: 6px;
+        color:white;
     }
 
     p{
@@ -61,6 +65,7 @@ section{
 }
 .column-left {
      @include columna($width: 32%);
+     background-color: #5d26cab8;
 
 }
 
@@ -73,9 +78,18 @@ section{
     text-align: right;
     color:white;
 }
-.html{
+$color-barra:rgb(33, 0, 150);
+.Ingles{
     width: 90%;
-    background-color: red;
+    background-color: $color-barra;
+}
+.Castellano{
+    width: 100%;
+    background-color: $color-barra;
+}
+.Valenciano{
+    width: 70%;
+    background-color:$color-barra;
 }
 
 .column-right {
