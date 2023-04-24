@@ -1,16 +1,18 @@
 $border: 1px solid black;
 $border2: 2px solid red;
 
-@mixin centrado(){
+@mixin centrado() {
     margin-left: auto;
     margin-right: auto;
 }
+
 @mixin columna($width: 25%) {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: $width;
 }
+
 * {
     width: 100%;
     height: 100%;
@@ -18,98 +20,114 @@ $border2: 2px solid red;
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     padding: 30px;
-    background: linear-gradient(to right,rgb(225, 159, 224), #9a78e0);
+    background: linear-gradient(to right, rgb(225, 159, 224), #9a78e0);
 }
-main{
+
+main {
     width: 1000px;
-    height: 1300px;   
+    height: 1300px;
     padding: 34px;
     @include centrado();
     background-color: white;
 }
 
-section{
+section {
     display: flex;
     flex-direction: column;
-    padding:10px;
+    padding: 10px;
     font-weight: bold;
-    border: $border;  
-    .titulo{
-        font-size:28px;
+    border-bottom: rgb(5, 21, 129) 4px solid;
+
+    .titulo {
+        font-size: 28px;
         margin-bottom: 6px;
-        color:white;
+        color: white;
         height: 25%;
     }
 
-    p{
+    p {
         font-size: 22px;
         word-spacing: 2px;
-        word-break:break-all;
+        word-break: break-all;
+        height: auto;
     }
 }
 
-.foto{
-    height: 300px;
+.foto {
+    height: 400px;
     width: 100%;
-    border-radius: 5px;
+
 }
-.container {  
+
+.container {
     display: flex;
     flex-direction: row;
     @include centrado();
 
 }
+
 .column-left {
-     @include columna($width: 32%);
-     background-color: #5d26cab8;
+    @include columna($width: 32%);
+    background-color: #5d26cab8;
 
 }
 
-.skill-container{
+.skill-container {
     width: 90%;
     background-color: #9f9f9f;
     margin: 0px 10px;
 }
-.skill{
+
+.skill {
     text-align: right;
-    color:white;
+    color: white;
 }
-$color-barra:rgb(33, 0, 150);
-.Ingles{
+
+$color-barra: rgb(33, 0, 150);
+
+.Ingles {
     width: 90%;
     background-color: $color-barra;
 }
-.Castellano{
+
+.Castellano {
     width: 100%;
     background-color: $color-barra;
 }
-.Valenciano{
+
+.Valenciano {
     width: 70%;
-    background-color:$color-barra;
+    background-color: $color-barra;
 }
 
 .column-right {
     @include columna($width: 68%);
 }
 
-.encabezado{
+.encabezado {
     width: 80%;
     @include centrado();
     height: 60%;
-    p{
-        font-size:80px;
-        text-align: center;;
+    border: $border;
+
+    p {
+        font-size: 80px;
+        text-align: center;
+        padding-bottom: 10%;
     }
 }
-.cuerpo{
+
+.cuerpo {
     display: flex;
     flex-direction: column;
     padding: 10px;
     width: 100%;
 
 }
+
 .cuerpo>p {
     margin-left: 9px;
     margin-bottom: 9px;
@@ -118,87 +136,90 @@ $color-barra:rgb(33, 0, 150);
     height: 40px;
 }
 
-.sub{
+.sub {
     width: 100%;
     height: 230px;
-
+    border: $border;
     display: flex;
     flex-direction: row;
 
-    .fecha{
+    .fecha {
         width: 60%;
         padding: 0px 10px 10px 15px;
 
 
-        p{
+        p {
             margin-top: 40px;
             padding-bottom: 20px;
             font-size: 20px;
             height: 20px;
         }
     }
-    .descripción{
+
+    .descripción {
         width: 400px;
         padding: 13px;
 
 
-        p{
+        p {
             margin-top: 15px;
             padding-top: 5px;
             padding-right: 25px;
             font-size: 18px;
             height: 50px;
             width: 400px;
-            word-break:break-all;
+            word-break: break-all;
         }
     }
 }
-.contenedor-lineatiempo{
+
+.contenedor-lineatiempo {
     display: flex;
     flex-direction: column;
     padding: 10px;
     width: 50px;
 
 
-    .lineatiempo{
+    .lineatiempo {
         width: 15px;
         height: 300px;
         background-color: blue;
         position: relative;
-        
-        .punto{
+
+        .punto {
             content: "";
             display: block;
             width: 27px;
             height: 27px;
             background-color: white;
             position: absolute;
-            top:90px;
+            top: 90px;
             left: -7px;
             border-radius: 50%;
             border: 4px solid rgb(69, 3, 3);
         }
 
-        &::after{
+        &::after {
             content: "";
             display: block;
             width: 20px;
             height: 20px;
             background-color: white;
             position: absolute;
-            top:20px;
+            top: 20px;
             left: -7px;
             border-radius: 50%;
             border: 4px solid rgb(69, 3, 3);
         }
-        &::before{
+
+        &::before {
             content: "";
             display: block;
             width: 20px;
             height: 20px;
             background-color: white;
             position: absolute;
-            top:160px;
+            top: 160px;
             left: -7px;
             border-radius: 50%;
             border: 4px solid rgb(69, 3, 3);
@@ -207,11 +228,11 @@ $color-barra:rgb(33, 0, 150);
 
 }
 
-.cierre{
+.cierre {
     display: flex;
     flex-direction: column;
     padding: 10px;
- 
+
 
     p {
         margin-left: 9px;
@@ -221,14 +242,48 @@ $color-barra:rgb(33, 0, 150);
         height: 40px;
     }
 
-    .iconos{
+    .iconos {
         display: flex;
         flex-direction: row;
         @include centrado();
     }
 }
-.imagen{
+
+.imagen {
     height: 140px;
     width: 140px;
-    margin:10px;
+    margin: 10px;
+}
+
+.componente {
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+    border: $border;
+    text-align: center;
+    position: relative;
+    padding:10px;
+}
+
+.centro {
+    content: "a";
+    position: absolute;
+    left: 90px;
+    top: 10px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid rgb(46, 7, 188);
+
+    &::after {
+        content: attr(data-description);
+        display: block;
+        position: relative;
+        background-color: white;
+
+
+        border: 4px solid rgb(69, 3, 3);
+    }
 }
